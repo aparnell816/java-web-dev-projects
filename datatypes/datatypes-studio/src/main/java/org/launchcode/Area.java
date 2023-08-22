@@ -6,8 +6,8 @@ public class Area {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the radius: ");
         double radiusEquals = input.nextDouble();
-        double area = 3.14 * radiusEquals * radiusEquals;
-        System.out.println("The area is: " + area);
+        //double area = 3.14 * radiusEquals * radiusEquals;
+        System.out.println("The area is: " + Circle.getArea(radiusEquals));
 
         input.close();
 
