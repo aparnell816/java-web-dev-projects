@@ -11,14 +11,19 @@ public class AliceInWonderland {
                 "thought Alice 'without pictures or conversation?'";
         String newSentence = sentence.toLowerCase();
         //System.out.println(newSentence);
-        System.out.println("What word or phrase would you like to search for? ");
-        String wordSearched = input.nextLine().toLowerCase();
+        System.out.println("What word would you like to search for? ");
+        String wordSearched = input.next().toLowerCase();
         //System.out.println(wordSearched);
         input.close();
         Boolean isThere = newSentence.contains(wordSearched);
         //System.out.println(isThere);
         if (isThere.equals(true)) {
-            System.out.println(wordSearched + " is in the sentence");
+            Integer index = newSentence.indexOf(wordSearched);
+            Integer length = wordSearched.length();
+            System.out.println(wordSearched + " is in the sentence at index " + index + " and it has a length of " + length);
+            String changedSentence = newSentence.replace(wordSearched, "");
+            System.out.println(changedSentence);
+
         } else {
             System.out.println(wordSearched + " is not in the sentence");
         }
